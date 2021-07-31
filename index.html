@@ -45,7 +45,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -181,7 +183,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-31 17:31:00 / Modified: 18:15:33" itemprop="dateCreated datePublished" datetime="2021-07-31T17:31:00+08:00">2021-07-31</time>
+      <time title="Created: 2021-07-31 17:31:00 / Modified: 18:18:37" itemprop="dateCreated datePublished" datetime="2021-07-31T17:31:00+08:00">2021-07-31</time>
     </span>
 
   
@@ -195,14 +197,11 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cW411A7Jx?p=4">手把手教你搭建属于自己的hexo+github博客_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1at4y1D7rr?from=search&seid=2313895534161778262">hexo+github搭建个人博客，超详细_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Np4y1i7r5?from=search&seid=10966748137971312622">使用Hexo和码云Gitee免费搭建个人博客保姆级建站教程_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1at4y1D7rr?from=search&amp;seid=2313895534161778262">hexo+github搭建个人博客，超详细_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Np4y1i7r5?from=search&amp;seid=10966748137971312622">使用Hexo和码云Gitee免费搭建个人博客保姆级建站教程_哔哩哔哩_bilibili</a></p>
 <h1 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h1><h2 id="github改版后分支提交为main-需要更改"><a href="#github改版后分支提交为main-需要更改" class="headerlink" title="github改版后分支提交为main 需要更改"></a>github改版后分支提交为main 需要更改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">兄弟们，因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支，为保持一致性，可将本地git init的时候默认分支修改为main</span><br><span class="line">执行：</span><br><span class="line">       git --version  查看版本</span><br><span class="line">       git config --global init.defaultBranch main       git分支在2.28.0上，重新设置默认分支为main</span><br><span class="line"></span><br><span class="line">最后修改deploy那里的branch：将master改为main</span><br></pre></td></tr></table></figure>
-
-<h2 id="git连接不上需要unset"><a href="#git连接不上需要unset" class="headerlink" title="git连接不上需要unset"></a>git连接不上需要unset</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy </span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
-
+<h2 id="git连接不上需要unset"><a href="#git连接不上需要unset" class="headerlink" title="git连接不上需要unset"></a>git连接不上需要unset</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy </span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line">挂梯子</span><br></pre></td></tr></table></figure>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo clean cl </span><br><span class="line">#清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">hexo generate g</span><br><span class="line">#生成静态文件。</span><br><span class="line">hexo server s</span><br><span class="line">#启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line">hexo deploy d</span><br><span class="line">#部署网站。</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -295,8 +294,7 @@
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/389177782">https://zhuanlan.zhihu.com/p/389177782</a> 多智能体强化学习2021论文（二）RODE</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/359567528">https://zhuanlan.zhihu.com/p/359567528</a>  强化学习论文阅读笔记：RODE</p>
 <h2 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h2><p>我们首先提出将联合行动空间分解为<strong>有限的角色行动空间</strong>，根据其对<strong>环境和其他主体的影响</strong>进行<strong>聚类</strong>，学习基于动作效果的角色选择器可以使角色发现变得更容易，我们进一步将行动效应信息整合到角色政策中。</p>
-<p>#https:// sites.google.com/view/rode-marl 从视频上看 不同的角色role激励agent在某个方向上探索状态空间</p>
-<p>1）Agents first move to the edges (<em>Role 0</em>) to avoid being surrounded by the enemies, and 2) Agents alternate between attacking and retracting (<em>Role 2</em>) to attract and kill part of the enemies, gaining an advantage in numbers.</p>
+<h1 id="https-sites-google-com-view-rode-marl-从视频上看-不同的角色role激励agent在某个方向上探索状态空间"><a href="#https-sites-google-com-view-rode-marl-从视频上看-不同的角色role激励agent在某个方向上探索状态空间" class="headerlink" title="https:// sites.google.com/view/rode-marl 从视频上看 不同的角色role激励agent在某个方向上探索状态空间"></a>https:// sites.google.com/view/rode-marl 从视频上看 不同的角色role激励agent在某个方向上探索状态空间</h1><p>1）Agents first move to the edges (<em>Role 0</em>) to avoid being surrounded by the enemies, and 2) Agents alternate between attacking and retracting (<em>Role 2</em>) to attract and kill part of the enemies, gaining an advantage in numbers.</p>
 <p>1）代理首先移动到边缘（角色0）以避免被敌人包围，2）代理在攻击和缩回（角色2）之间交替，以吸引和杀死部分敌人，在数量中获得优势。</p>
 <h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><p>根据动作功能分解联合动作空间（角色发现更容易）。直观地说，<strong>当与其他代理合作时，在特定的观察下，只需要能够实现特定功能的操作子集</strong>。例如，在足球游戏中，没有控球权的玩家只需要在进攻时探索如何移动或冲刺。</p>
 <p>在实践中，我们建议首先学习<strong>基于效果的动作表示</strong>，并根据动作对环境和其他主体的影响将其<strong>聚类到角色动作空间</strong>中。然后，利用<strong>可用行动</strong>的影响知识，我们训练一个<strong>角色选择器，</strong>以确定相应的角色观察空间。</p>
@@ -306,7 +304,7 @@
 <p><img src="https://i.loli.net/2021/07/16/f1AZqKClBJ6VcFm.png" alt="image-20210716152319038"></p>
 <p>在我们的定义中，一组给定的角色不仅指定了<strong>任务的因数分解</strong>，还指定了子任务的<strong>策略</strong>。这种<strong>基于角色</strong>的表述是一种有效的动态分组机制，其中<strong>agent按角色分组</strong>。这样做的好处是，我们可以学习<strong>针对角色</strong>而不是针对代理的策略，从而为<strong>代理的数量提供可伸缩性</strong>（分组就减少代理数量了），并<strong>减少目标策略的搜索空间</strong>。在我们的框架中，代理通过在代理之间共享的<strong>角色选择器</strong>$\beta$决定扮演哪个角色。</p>
 <p>这里T$\to\varPsi$是一个确定性函数，以局部行动观察历史为条件。</p>
-<p>我们的目标是学习一套角色$\varPsi^*$*最大化预期的global return$Q^{\varPsi}(s_t,a_t)$=</p>
+<p>我们的目标是学习一套角色$\varPsi^<em>$</em>最大化预期的global return$Q^{\varPsi}(s_t,a_t)$=</p>
 <p><img src="https://i.loli.net/2021/07/16/wlqi7otaKSyxNnb.png" alt="image-20210716153148418"></p>
 <p>学习角色涉及两个问题:<strong>学习子任务和角色策略</strong>。为了学习子任务，我们需要学习<strong>角色选择器</strong>$\beta$,并确定<strong>角色动作空间</strong>$A_j$.这两个组成部分分别决定了<strong>角色的观察空间和行动空间</strong>。我们现在介绍学习这些组件的框架</p>
 <p><img src="https://i.loli.net/2021/07/16/bXwNCrmdvncyhZe.png" alt="image-20210716153419961"></p>
@@ -362,8 +360,7 @@
 <p><img src="https://i.loli.net/2021/07/18/PUAgY1z2sDKhpG9.png" alt="image-20210718181414590"></p>
 <p>为了避免k值的选择和异常值的处理方式之间的这种复杂交互，我们建议在聚类动作表示时使用X-means，我们将在下一节详细讨论</p>
 <h4 id="E-2其他聚类算法"><a href="#E-2其他聚类算法" class="headerlink" title="E.2其他聚类算法"></a>E.2其他聚类算法</h4><p>X-means (Pelleg等人，2000)通过<strong>自动确定簇的数量</strong>改进了k-means。我们使用最小的无噪声描述长度作为X-means 的分裂标准，并在所有14张图上使用X-means测试RODE。结果如图15所示。我们可以看到，结果与预先定义的k值的k-means相当。因此，当面对一个新任务时，我们推荐X-means，而对于用户知道角色数量的任务，k-means可以更准确。</p>
-<img src="https://i.loli.net/2021/07/18/JPqUCjy7m4zfeRh.png" alt="image-20210718181151029" style="zoom:150%;" />
-
+<p><img src="https://i.loli.net/2021/07/18/JPqUCjy7m4zfeRh.png" alt="image-20210718181151029" style="zoom:150%;" /></p>
 <h3 id="F-ROLE-REPRESENTATIONS-角色表示"><a href="#F-ROLE-REPRESENTATIONS-角色表示" class="headerlink" title="F ROLE REPRESENTATIONS 角色表示"></a>F ROLE REPRESENTATIONS 角色表示</h3><p><img src="https://i.loli.net/2021/07/18/nyUdXcoxT9tw2r5.png" alt="image-20210718181537930"></p>
 <p>我们使用角色动作空间中的<strong>动作的平均</strong>表示来表示一个角色。我们发现，<strong>角色选择器和角色策略的Q网络(包括处理本地观测的gru和网络($f_\beta$或$f_{\rho_j}$)的分离</strong>对于确保这些角色表示具有足够的表达性是重要的。</p>
 
