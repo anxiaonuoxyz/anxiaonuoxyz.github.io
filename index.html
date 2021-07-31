@@ -47,6 +47,8 @@
   </noscript>
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -183,7 +185,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-31 17:31:00 / Modified: 18:18:37" itemprop="dateCreated datePublished" datetime="2021-07-31T17:31:00+08:00">2021-07-31</time>
+      <time title="Created: 2021-07-31 17:31:00 / Modified: 19:15:02" itemprop="dateCreated datePublished" datetime="2021-07-31T17:31:00+08:00">2021-07-31</time>
     </span>
 
   
@@ -202,6 +204,10 @@
 <h1 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h1><h2 id="github改版后分支提交为main-需要更改"><a href="#github改版后分支提交为main-需要更改" class="headerlink" title="github改版后分支提交为main 需要更改"></a>github改版后分支提交为main 需要更改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">兄弟们，因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支，为保持一致性，可将本地git init的时候默认分支修改为main</span><br><span class="line">执行：</span><br><span class="line">       git --version  查看版本</span><br><span class="line">       git config --global init.defaultBranch main       git分支在2.28.0上，重新设置默认分支为main</span><br><span class="line"></span><br><span class="line">最后修改deploy那里的branch：将master改为main</span><br></pre></td></tr></table></figure>
 <h2 id="git连接不上需要unset"><a href="#git连接不上需要unset" class="headerlink" title="git连接不上需要unset"></a>git连接不上需要unset</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy </span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line">挂梯子</span><br></pre></td></tr></table></figure>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo clean cl </span><br><span class="line">#清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">hexo generate g</span><br><span class="line">#生成静态文件。</span><br><span class="line">hexo server s</span><br><span class="line">#启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line">hexo deploy d</span><br><span class="line">#部署网站。</span><br></pre></td></tr></table></figure>
+<p>​    configyml文件配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">## 安装 hexo ； --save 参数会让 npm 在安装 hexo-math 之后自动将它写入 package.json 文件里，以便之后多电脑同步时使用</span><br><span class="line">$ npm install hexo-math --save</span><br><span class="line">## 卸载默认 markdown 渲染引擎 hexo-renderer-marked；若不卸载，会和新的引擎发生冲突（conflict）</span><br><span class="line">$ npm uninstall hexo-renderer-marked --save</span><br><span class="line"></span><br><span class="line">## 安装新引擎 hexo-renderer-kramed </span><br><span class="line">$ npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2021/07/31/Geh9djNKqun2ZAR.png" alt="image-20210731191349697"></p>
+<p><img src="https://i.loli.net/2021/07/31/hlOujJzTPXpDsWe.png" alt="image-20210731191433257"></p>
 
       
     </div>
@@ -253,7 +259,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-31 17:23:57 / Modified: 17:25:06" itemprop="dateCreated datePublished" datetime="2021-07-31T17:23:57+08:00">2021-07-31</time>
+      <time title="Created: 2021-07-31 17:23:57 / Modified: 19:32:19" itemprop="dateCreated datePublished" datetime="2021-07-31T17:23:57+08:00">2021-07-31</time>
     </span>
 
   
