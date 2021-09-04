@@ -20,23 +20,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="todo跑一下结果复现一下和qmix对比 看一下sc2的接口中action 6 - 29编码是如何定义的？最近的或者？ 结合两个论文的图画一个整图 问题3： 每个agent已经选好action和role之后的输出进入qmix 每个agent选的分别是$Q_1,Q_2$等  问题2： 1234567891011121314151617enemy_units &#x3D; [    unit    for un">
+<meta property="og:type" content="article">
+<meta property="og:title" content="code for rode">
+<meta property="og:url" content="http://example.com/2021/09/04/Code%20for%20rode/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="todo跑一下结果复现一下和qmix对比 看一下sc2的接口中action 6 - 29编码是如何定义的？最近的或者？ 结合两个论文的图画一个整图 问题3： 每个agent已经选好action和role之后的输出进入qmix 每个agent选的分别是$Q_1,Q_2$等  问题2： 1234567891011121314151617enemy_units &#x3D; [    unit    for un">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/08/29/6SchVMgw3ynokWL.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/24/l3KIXckob5UnTg7.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/12/8qzBxmn1EjhYQi4.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/18/3T1RMwCdmQHzAn8.png">
+<meta property="article:published_time" content="2021-09-04T07:03:50.448Z">
+<meta property="article:modified_time" content="2021-09-04T07:32:46.785Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/08/29/6SchVMgw3ynokWL.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/09/04/Code%20for%20rode/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/09/04/Code%20for%20rode/","path":"2021/09/04/Code for rode/","title":"code for rode"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>code for rode | Hexo</title>
   
 
 
@@ -94,7 +103,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -107,6 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#todo"><span class="nav-number">1.</span> <span class="nav-text">todo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -150,16 +160,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/04/Code%20for%20rode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -172,9 +183,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/04/Code%20for%20rode/" class="post-title-link" itemprop="url">code for rode</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          code for rode
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -198,7 +209,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h1><p>跑一下结果复现一下和qmix对比</p>
+        <h1 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h1><p>跑一下结果复现一下和qmix对比</p>
 <p>看一下sc2的接口中action 6 - 29编码是如何定义的？最近的或者？</p>
 <p>结合两个论文的图画一个整图</p>
 <p>问题3：</p>
@@ -270,7 +281,6 @@
    1., 0., 0., 0., 1., 1., 0., 0., 0., 1., 0., 0., 1.])],)
 </code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Arguments: ([</span><br><span class="line">	   array([1., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,</span><br><span class="line">       0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.]), </span><br><span class="line">       array([1., 1., 1., 1., 1., 1., 0., 0., 0., 1., 0., 1., 0., 1., 1., 0., 1.,</span><br><span class="line">       0., 1., 1., 1., 0., 0., 1., 1., 0., 0., 1., 1., 0.]), </span><br><span class="line">       array([1., 1., 1., 1., 1., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 0.,</span><br><span class="line">       1., 0., 0., 0., 1., 1., 0., 0., 0., 1., 0., 0., 1.])],)</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
@@ -278,335 +288,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/04/Qmix%20realize%20in%20win10/" rel="prev" title="qmix realize in win10">
+                  <i class="fa fa-chevron-left"></i> qmix realize in win10
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/04/Qmix%20realize%20in%20win10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/04/Qmix%20realize%20in%20win10/" class="post-title-link" itemprop="url">qmix realize in win10</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-09-04 15:03:25 / Modified: 15:32:37" itemprop="dateCreated datePublished" datetime="2021-09-04T15:03:25+08:00">2021-09-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>首先更新pip源 在用户文件夹下新建pip文件夹pip.ini文件 阿里云的源最好</p>
-<p>下载cuda10.0以及cudnn</p>
-<p>教程 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37296487/article/details/83028394">(4条消息) Win10安装CUDA10和cuDNN_我要，我要，我还要-CSDN博客_win10安装cuda</a></p>
-<p>cudnn <a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive | NVIDIA Developer</a></p>
-<p>cuda <a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal">https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal</a></p>
-<p>pip install -r re_requirement.txt 安装所需要的包</p>
-<p>安装pytorch相关     torch1.2.0 0.4.0 whl安装</p>
-<p><a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/torch_stable.html">https://download.pytorch.org/whl/torch_stable.html</a></p>
-<p>pip install 安装</p>
-<p>安装smac 出错 使用 python setup.py install命令安装</p>
-<p>在sc目录下新建maps文件夹 放入smac_map</p>
-<p>测试：python -m smac.examples.random_agents</p>
-<h1 id="此时会安装一些东西-需要添加环境变量-SC2PATH"><a href="#此时会安装一些东西-需要添加环境变量-SC2PATH" class="headerlink" title="此时会安装一些东西 需要添加环境变量 SC2PATH"></a>此时会安装一些东西 需要添加环境变量 SC2PATH</h1><p>教程  <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39059031/article/details/86566501">(4条消息) 强化学习实战(六)【Windows安装星际争霸Ⅱ 强化学习环境教程】_小小何先生的学习之旅-CSDN博客</a></p>
-<p>配置结束</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python main.py --map=corridor --alg=qmix --n_steps=5050000 --cuda=True --replay_dir=C:\Users\anxiaonuoxyz\Desktop\StarCraft-master\replay_save</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/31/Hexo%20bulid/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/31/Hexo%20bulid/" class="post-title-link" itemprop="url">Hexo bulid</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-31 17:31:00" itemprop="dateCreated datePublished" datetime="2021-07-31T17:31:00+08:00">2021-07-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-09-04 15:33:19" itemprop="dateModified" datetime="2021-09-04T15:33:19+08:00">2021-09-04</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cW411A7Jx?p=4">手把手教你搭建属于自己的hexo+github博客_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1at4y1D7rr?from=search&amp;seid=2313895534161778262">hexo+github搭建个人博客，超详细_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Np4y1i7r5?from=search&amp;seid=10966748137971312622">使用Hexo和码云Gitee免费搭建个人博客保姆级建站教程_哔哩哔哩_bilibili</a></p>
-<h1 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h1><h2 id="文件结尾必须是md"><a href="#文件结尾必须是md" class="headerlink" title="文件结尾必须是md"></a>文件结尾必须是md</h2><h2 id="title-使用三个—-回车-同时冒号后面必须有空格"><a href="#title-使用三个—-回车-同时冒号后面必须有空格" class="headerlink" title="title 使用三个—-回车 同时冒号后面必须有空格"></a>title 使用三个—-回车 同时冒号后面必须有空格</h2><h2 id="github改版后分支提交为main-需要更改"><a href="#github改版后分支提交为main-需要更改" class="headerlink" title="github改版后分支提交为main 需要更改"></a>github改版后分支提交为main 需要更改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">兄弟们，因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支，为保持一致性，可将本地git init的时候默认分支修改为main</span><br><span class="line">执行：</span><br><span class="line">       git --version  查看版本</span><br><span class="line">       git config --global init.defaultBranch main       git分支在2.28.0上，重新设置默认分支为main</span><br><span class="line"></span><br><span class="line">最后修改deploy那里的branch：将master改为main</span><br></pre></td></tr></table></figure>
-<h2 id="git连接不上需要unset"><a href="#git连接不上需要unset" class="headerlink" title="git连接不上需要unset"></a>git连接不上需要unset</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy </span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line">挂梯子</span><br><span class="line"></span><br><span class="line">每次都需要输入</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hexo clean cl </span><br><span class="line"><span class="comment">#清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></span><br><span class="line">hexo generate g</span><br><span class="line"><span class="comment">#生成静态文件。</span></span><br><span class="line"></span><br><span class="line">hexo deploy d</span><br><span class="line"><span class="comment">#部署网站。</span></span><br><span class="line"></span><br><span class="line">hexo server s</span><br><span class="line"><span class="comment">#启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span></span><br></pre></td></tr></table></figure>
-<p>​    configyml文件配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">## 安装 hexo ； --save 参数会让 npm 在安装 hexo-math 之后自动将它写入 package.json 文件里，以便之后多电脑同步时使用</span><br><span class="line">$ npm install hexo-math --save</span><br><span class="line">## 卸载默认 markdown 渲染引擎 hexo-renderer-marked；若不卸载，会和新的引擎发生冲突（conflict）</span><br><span class="line">$ npm uninstall hexo-renderer-marked --save</span><br><span class="line"></span><br><span class="line">## 安装新引擎 hexo-renderer-kramed </span><br><span class="line">$ npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>打开 <code>~/blog/node_modules\kramed\lib\rules\inline.js</code> 文件（Hexo 博客所在文件夹的根目录下的 <code>node_modules</code> 文件夹），把第 11 行的 <code>escape</code> 变量的值修改为：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>同时把第 20 行的 <code>em</code> 变量修改为：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2021/07/31/Geh9djNKqun2ZAR.png" alt=""></p>
-<p><img src="https://i.loli.net/2021/07/31/hlOujJzTPXpDsWe.png" alt="image-20210731191433257"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/31/Qmix%20and%20rode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/31/Qmix%20and%20rode/" class="post-title-link" itemprop="url">QMix and rode</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-07-31 17:23:57 / Modified: 19:32:19" itemprop="dateCreated datePublished" datetime="2021-07-31T17:23:57+08:00">2021-07-31</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/319565677?sort=created">https://www.zhihu.com/question/319565677?sort=created</a> 如何理解强化学习中的折扣率？</p>
-<h1 id="Value-Decomposition-Networks-For-Cooperative-Multi-Agent-Learning"><a href="#Value-Decomposition-Networks-For-Cooperative-Multi-Agent-Learning" class="headerlink" title="Value-Decomposition Networks For Cooperative Multi-Agent Learning"></a>Value-Decomposition Networks For Cooperative Multi-Agent Learning</h1><p>具有单一联合奖励信号的多智能体协同强化学习问题</p>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>基于Value的方法，集中的端到端方式来分散训练</p>
-<p>QMix采用一种网络它将联合行动值作为每个agent值的复杂非线性组合进行估算，该组合仅以局部观测为条件。</p>
-<p>从结构上强制每个agent的联合行动值是单调的，这允许在非政策学习中实现联合行动值的易于处理的最大化，并保证集中和分散的政策之间的一致性。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>要求学习分散政策，分散只考虑每个agent的local的动作观察历史，这样减弱了联合行动空间随智能体数量呈指数增长的问题</p>
-<p>分散的政策通常可以在模拟或实验室环境中以集中的方式学习。围绕如何最好地<strong>集中exploit</strong>的许多挑战仍然存在。</p>
-<p>如何表示和使用大多数RL方法的action-value函数，一方面适当地捕捉agent行为的影响需要一个集中的action-value函数Qtot，另一方面，agent太多了函数难以学习，分散政策无法允许每个agent只根据个人观察选择一个单独的行动。</p>
-<p>确保在$Q_{tot}$执行的一个全局argmax操作与在每个$Q_{a}$执行的一组单独argmax操作产生相同的结果。因此需要施加约束</p>
-<p><img src="https://i.loli.net/2021/06/23/efbSHsl7yKdUYu4.png" alt="image-20210623164309131"></p>
-<p>QMIX由代表每个Qa的agent networks和mixing network组成，<strong>混合网络将它们组合成Qtot，而不是VDN中的简单和</strong>。但以一种复杂的非线性方式确保了集中和分散政策之间的一致性。</p>
-<p>QMIX可以用因数表示来表示复杂的集中action-value函数，这种因数表示可以很好地扩展agent的数量，并允许通过线性时间的单个argmax操作轻松提取分散策略。</p>
-<h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><p>一方面，为多智能体系统寻找策略的自然方法是直接学习分散的价值函数或策略：<strong>Q-learning和VDN</strong>这些方法虽然实现了微不足道的去中心化，但由于同时学习和探索代理所导致的环境的非平稳性，容易产生不稳定性。</p>
-<p>另一方面，联合行动的集中学习可以自然地处理协调问题，避免非平稳性，但由于联合行动的空间在代理的数量上呈指数级增长，因此很难进行扩展<strong>：coordination graphs</strong>（该方法通过将一个global奖励函数分解为一组agent-local术语，来挖掘agent之间的条件独立性），<strong>Sparse cooperative Q-learning（</strong>一个表格式的q学习算法，它只学习协调一组合作智能体在必要状态下的行为，并将这些依赖关系编码到一个协调图中）这些方法要求预先提供<strong>agent之间的依赖关系</strong>，而我们不需要这样的先验知识。相反，我们假设每个agent总是对global奖励做出贡献，并了解其在每个state的贡献大小。</p>
-<p>一些研究开发了混合方法，利用集中学习和完全分散执行的设置。COMA（<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/127010848">多智能体强化学习笔记04 COMA算法原理介绍 - 知乎 (zhihu.com)</a>）使用一个<strong>集中的批评者来训练分散的参与者</strong>，估计每个代理的反事实优势函数，以解决多代理的信用分配问题。</p>
-<p>VDN（value decomposition networks 价值分解网络），允许集中的value-function学习和分散的执行，将中央state-action值函数分解为单个agent和</p>
-<p>QMIX依靠一个神经网络将集中状态转换为另一个神经网络的权重，第二种神经网络通过保持其权值为正来约束其相对于输入是单调的。</p>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>一个完全协作的多智能体任务可以被描述为Dec-POMDP </p>
-<p><img src="https://i.loli.net/2021/07/28/OhKupw278Qjod5v.png" alt="image-20210624175017410"></p>
-<p><img src="https://i.loli.net/2021/07/28/OhKupw278Qjod5v.png" alt="image-20210624175024997"></p>
-<p><img src="https://i.loli.net/2021/06/24/Rk619hiVX5bcFG2.png" alt="image-20210624175039262"></p>
-<p><img src="https://i.loli.net/2021/06/24/f6nJqHhtTozGvOr.png" alt="image-20210624175059060"></p>
-<p><img src="https://i.loli.net/2021/06/24/2wz4xBl9tgsXDQL.png" alt="image-20210624175114835"></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55003734">多智能体强化学习入门（五）——QMIX算法分析 - 知乎 (zhihu.com)</a></p>
-<h1 id="RODE-LEARNING-ROLES-TO-DECOMPOSE-MULTI-AGENT-TASKS"><a href="#RODE-LEARNING-ROLES-TO-DECOMPOSE-MULTI-AGENT-TASKS" class="headerlink" title="RODE: LEARNING ROLES TO DECOMPOSE MULTI-AGENT TASKS"></a>RODE: LEARNING ROLES TO DECOMPOSE MULTI-AGENT TASKS</h1><p><a target="_blank" rel="noopener" href="https://github.com/TonghanWang/RODE"><a target="_blank" rel="noopener" href="https://github.com/TonghanWang/RODE">GitHub - TonghanWang/RODE: Codes accompanying the paper “RODE: Learning Roles to Decompose Multi-Agent Tasks (ICLR 2021, https://arxiv.org/abs/2010.01523). RODE is a scalable role-based multi-agent learning method which effectively discovers roles based on joint action space decomposition according to action effects, establishing a new state of the art on the StarCraft multi-agent benchmark.</a></a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/389177782">https://zhuanlan.zhihu.com/p/389177782</a> 多智能体强化学习2021论文（二）RODE</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/359567528">https://zhuanlan.zhihu.com/p/359567528</a>  强化学习论文阅读笔记：RODE</p>
-<h2 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h2><p>我们首先提出将联合行动空间分解为<strong>有限的角色行动空间</strong>，根据其对<strong>环境和其他主体的影响</strong>进行<strong>聚类</strong>，学习基于动作效果的角色选择器可以使角色发现变得更容易，我们进一步将行动效应信息整合到角色政策中。</p>
-<h1 id="https-sites-google-com-view-rode-marl-从视频上看-不同的角色role激励agent在某个方向上探索状态空间"><a href="#https-sites-google-com-view-rode-marl-从视频上看-不同的角色role激励agent在某个方向上探索状态空间" class="headerlink" title="https:// sites.google.com/view/rode-marl 从视频上看 不同的角色role激励agent在某个方向上探索状态空间"></a>https:// sites.google.com/view/rode-marl 从视频上看 不同的角色role激励agent在某个方向上探索状态空间</h1><p>1）Agents first move to the edges (<em>Role 0</em>) to avoid being surrounded by the enemies, and 2) Agents alternate between attacking and retracting (<em>Role 2</em>) to attract and kill part of the enemies, gaining an advantage in numbers.</p>
-<p>1）代理首先移动到边缘（角色0）以避免被敌人包围，2）代理在攻击和缩回（角色2）之间交替，以吸引和杀死部分敌人，在数量中获得优势。</p>
-<h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><p>根据动作功能分解联合动作空间（角色发现更容易）。直观地说，<strong>当与其他代理合作时，在特定的观察下，只需要能够实现特定功能的操作子集</strong>。例如，在足球游戏中，没有控球权的玩家只需要在进攻时探索如何移动或冲刺。</p>
-<p>在实践中，我们建议首先学习<strong>基于效果的动作表示</strong>，并根据动作对环境和其他主体的影响将其<strong>聚类到角色动作空间</strong>中。然后，利用<strong>可用行动</strong>的影响知识，我们训练一个<strong>角色选择器，</strong>以确定相应的角色观察空间。</p>
-<p>该设计形成了一个<strong>双层学习框架</strong>。在<strong>顶层</strong>，<strong>角色选择器在较小的角色空间中以较低的时间分辨率协调角色分配</strong>。在<strong>较低</strong>的层次上，<strong>角色策略是在减少的原始行动观察空间中探索策略</strong>。通过这种方法，将一个多智能体合作问题分解为几个具有更少智能体的短视域学习问题，大大降低了学习复杂度。为了进一步提高子问题的学习效率，我们将<strong>角色策略设置在基于学习效果的动作表征上</strong>，从而提高了角色策略跨动作的泛化性。</p>
-<h2 id="2-RODE-LEARNING-FRAMEWORK"><a href="#2-RODE-LEARNING-FRAMEWORK" class="headerlink" title="2 RODE LEARNING FRAMEWORK"></a>2 RODE LEARNING FRAMEWORK</h2><p>我们的思想是学会将一个<strong>多智能体协作任务分解成一组子任务</strong>，每个子任务都有一个<strong>小得多的动作-观察空间</strong>。每个子任务都与一个<strong>角色相关联</strong>，使用<strong>相同角色的代</strong>理通过<strong>共享它们的学习</strong>来<strong>集体学习</strong>解决子任务的角色策略。形式上，我们提出子任务和角色的以下定义。</p>
-<p><img src="C:\Users\28918\AppData\Roaming\Typora\typora-user-images\image-20210716152337552.png" alt="image-20210716152337552"></p>
-<p><img src="https://i.loli.net/2021/07/16/f1AZqKClBJ6VcFm.png" alt="image-20210716152319038"></p>
-<p>在我们的定义中，一组给定的角色不仅指定了<strong>任务的因数分解</strong>，还指定了子任务的<strong>策略</strong>。这种<strong>基于角色</strong>的表述是一种有效的动态分组机制，其中<strong>agent按角色分组</strong>。这样做的好处是，我们可以学习<strong>针对角色</strong>而不是针对代理的策略，从而为<strong>代理的数量提供可伸缩性</strong>（分组就减少代理数量了），并<strong>减少目标策略的搜索空间</strong>。在我们的框架中，代理通过在代理之间共享的<strong>角色选择器</strong>$\beta$决定扮演哪个角色。</p>
-<p>这里T$\to\varPsi$是一个确定性函数，以局部行动观察历史为条件。</p>
-<p>我们的目标是学习一套角色$\varPsi^<em>$</em>最大化预期的global return$Q^{\varPsi}(s_t,a_t)$=</p>
-<p><img src="https://i.loli.net/2021/07/16/wlqi7otaKSyxNnb.png" alt="image-20210716153148418"></p>
-<p>学习角色涉及两个问题:<strong>学习子任务和角色策略</strong>。为了学习子任务，我们需要学习<strong>角色选择器</strong>$\beta$,并确定<strong>角色动作空间</strong>$A_j$.这两个组成部分分别决定了<strong>角色的观察空间和行动空间</strong>。我们现在介绍学习这些组件的框架</p>
-<p><img src="https://i.loli.net/2021/07/16/bXwNCrmdvncyhZe.png" alt="image-20210716153419961"></p>
-<h3 id="2-1通过学习动作表征来确定角色动作空间-DETERMINING-ROLE-ACTION-SPACES-BY-LEARNING-ACTION-REPRESENTATIONS"><a href="#2-1通过学习动作表征来确定角色动作空间-DETERMINING-ROLE-ACTION-SPACES-BY-LEARNING-ACTION-REPRESENTATIONS" class="headerlink" title="2.1通过学习动作表征来确定角色动作空间 DETERMINING ROLE ACTION SPACES BY LEARNING ACTION REPRESENTATIONS"></a>2.1通过学习动作表征来确定角色动作空间 DETERMINING ROLE ACTION SPACES BY LEARNING ACTION REPRESENTATIONS</h3><p>分类所有动作为不同角色</p>
-<p>限制每个角色的动作空间可以显著减少策略的搜索空间。我们的方法的关键是根据<strong>行动属性来分解行动空间</strong>，从而让角色专注于<strong>具有类似效果的行动，</strong>如在《星际争霸2》中<strong>攻击同种类型</strong>的敌人单位。为此，我们学习可以反映行为对环境和其他主体的影响的行为表征。行为的效果可以通过<strong>诱导奖励和局部观察</strong>的变化来衡量。因此，我们制定了一个学习行为表征的目标，激励包括足够的信息，以便在<strong>已知其他主体的行为和当前的观察时</strong>，可以预测下一个观察和奖励。</p>
-<p>图中a为动作编码器$f_e$，将ont-hot动作<strong>映射</strong>到d维表示空间。我们用$z_a$表示这个空间中的<strong>动作a</strong>.$z_a$=$f_e(a;\theta_e)$其中$\theta$为参数。它被用来预测下一个观察$o_i^{‘}$和全局奖励r，给定一个anget i当前的观测值$o_i$,和其他agent的one-hot动作$a_{-i}$。这个模型可以解释为一个forward model,，它通过最小化下面的损失函数来训练</p>
-<p><img src="https://i.loli.net/2021/07/16/tEkLdoi325v19hf.png" alt="image-20210716164605980"></p>
-<p>一开始，我们初始化K个角色，每个角色都有完整的行动空间。在收集样本并训练预测模型的$t_e$时间步长后，<strong>根据动作的潜在表现对动作进行聚类</strong>，并设置<strong>每个角色的动作空间以包含一个聚类</strong>。将离群值添加到所有集群中，以避免只包含一个操作的操作集。更新后，训练开始，每个角色的动作表现和动作空间在训练期间保持不变。</p>
-<h2 id="2-2学习角色选择器和角色策略-LEARNING-THE-ROLE-SELECTOR-AND-ROLE-POLICIES"><a href="#2-2学习角色选择器和角色策略-LEARNING-THE-ROLE-SELECTOR-AND-ROLE-POLICIES" class="headerlink" title="2.2学习角色选择器和角色策略 LEARNING THE ROLE SELECTOR AND ROLE POLICIES"></a>2.2学习角色选择器和角色策略 LEARNING THE ROLE SELECTOR AND ROLE POLICIES</h2><p>根据动作的效果学习动作表示来聚类动作会导致动作空间的因式分解，其中<strong>每个动作子集都可以实现特定的功能</strong>。为了充分利用这种因子分解，我们使用了一个双层层次结构来协调角色和基本动作的选择。在顶层，角色选择器在<strong>每个c时间步中为每个代理分配一个角色</strong>。角色分配完成后，agent在相应的受限角色动作空间中<strong>探索角色策略</strong>。</p>
-<p>对于<strong>角色选择器</strong>，我们可以简单地使用<strong>传统的Q-network</strong>，它的<strong>输入</strong>是局部动作观察历史，<strong>输出</strong>是每个角色的q值。但是，这种结构可能并不有效，因为它<strong>忽略</strong>了不同角色的<strong>行动空间信息</strong>。从直观上看，<strong>选择角色就是选择下一个c时间步要执行的动作子集</strong>，所以<strong>选择角色的q值与其角色动作空间密切相关</strong>。因此，我们建议<strong>基于可用动作的平均表示来选择角色</strong>。图1(b)显示了提议的<strong>角色选择器</strong>结构。具体来说,我们称之为</p>
-<p><img src="https://i.loli.net/2021/07/18/NjhKQagRV9Ftsen.png" alt="image-20210718112234599"></p>
-<p>$\rho_j$<strong>为角色的表征，$A_j$是其受限的动作空间，为了选择角色，agent共享一个线性层和一个参数为$\theta_{\tau\beta}$的GRU，编码本地动作观察历史$\tau$为固定长度的向量$h_{\tau}$.一个参数为$\theta_{\beta}$的全连接层$f_{\beta}(h_{\tau};\theta_{\beta})$作为角色选择器，然后将$h_{\tau}$映射到$z_{\tau}$,并估算agent i选择</strong>角色$\rho_j$的预期收益为</p>
-<p><img src="https://i.loli.net/2021/07/18/foFsQpyT24jAvg5.png" alt="image-20210718115552355"></p>
-<p>代理同时选择它们的角色，这可能会导致意外的行为。例如，在《星际争霸2》中，所有选择攻击特定单位类型的特工都会造成过度杀伤（<strong>打一个伤害溢出</strong>）。为了更好地协调角色分配，我们使用mixing network来估计<strong>全局q值</strong>。所以<strong>角色选择器可以使用全局奖励进行训练</strong>。本文使用<strong>QMIX</strong>引入的混合网络进行单调逼近。然后我们将以下td loss最小化，<strong>以更新角色选择器</strong></p>
-<p><img src="https://i.loli.net/2021/07/18/3T1RMwCdmQHzAn8.png" alt="image-20210718120752326"></p>
-<p>角色分配完成后，在接下来的c个时间步中，<strong>agent只能执行对应角色动作空间中的操作</strong>。与角色选择器类似，学习角色策略最直接的方法是使用传统的<strong>深度q -network</strong> ，它直接估计每个动作的q值。而基于动作表征的q值充分利用了动作的效果信息，可以更好地在动作间泛化。</p>
-<p>因此，我们使用图1(c)所示的框架来学习<strong>角色策略</strong>。具体来说，<strong>代理再次使用一个共享的线性层和一个GRU</strong>，<strong>它们一起编码了本地的行动观察历史$\tau$为向量$h_\tau$.</strong></p>
-<p><img src="https://i.loli.net/2021/07/18/4dXtF9cwMpkzUJS.png" alt="image-20210718121752888"></p>
-<p>并且<strong>使用来自与角色选择器相同的重放缓冲区D的统一样本估计期望</strong>,此外，仅在训练过程中使用角色选择器和角色策略两个混合网络进行训练。由于基于效果的动作表示，我们的框架在实践中是轻量级的，我们使用一个没有激活函数的单一线性层作为角色策略，使用一个两层全连接的网络作为角色选择器。</p>
-<h2 id="3-RELATED-WORK"><a href="#3-RELATED-WORK" class="headerlink" title="3 RELATED WORK"></a>3 RELATED WORK</h2><p>1RODE采用了分层决策结构 hierarchical decisionmaking structure.</p>
-<p>2使用动作表示来分解多智能体任务。 action representations</p>
-<p>3其中通过基于效应 的行动空间分解(effect-based action space factorization )和基于角色的层次结构( role-based hierarchical structure)来<strong>减少搜索空间</strong>，该结构设计用于在这些因素行动空间中进行高效学习</p>
-<h2 id="4-EXPERIMENTS"><a href="#4-EXPERIMENTS" class="headerlink" title="4 EXPERIMENTS"></a>4 EXPERIMENTS</h2><p>我们设计实验来回答以下问题:</p>
-<p>(1)所提出的预测模型能否学习反映行为影响的行为表征?</p>
-<p>(2)RODE能提高学习效率吗?如果是，那么哪个组件对性能提高贡献最大</p>
-<p>(3)rode可以支持快速转移到具有不同行动和代理的环境的环境吗？</p>
-<p>(4)角色选择者能否学习可解释的高层合作行为</p>
-<p>sc2 四个方向移动 stop noop 为基础 有几个敌人就有几个攻击敌人的动作 <strong>总共是n+6个动作</strong></p>
-<h3 id="4-1动作表征"><a href="#4-1动作表征" class="headerlink" title="4.1动作表征"></a>4.1动作表征</h3><p>corridor map 6xx打24狗 特点是是同质的代理人和敌人。在这个任务中，所有的攻击行动都具有相似的效果，因为敌人是同质的。此外，由于地图的对称性，向北和向东移动也会对环境产生类似的影响，使agent朝向敌人。同样地，向南和向西移动也会产生同样的效果，因为这两种行动都会让代理人远离敌人。习得的动作编码器捕获动作空间中的这些底层结构(图2左)。<strong>我们可以在潜在动作表征空间中观察到三个清晰的簇，分别对应于上述三种类型的动作</strong></p>
-<p>3s5z vs 3s6z map。敌人团队由不同的单位组成，攻击潜行者和狂热者有不同的效果。我们的预测模型强调了这一差异，攻击行为分为两组(图2右)。此外，习得的行动编码器还捕捉到向北/向南移动和向其他方向移动之间的差异，这两种移动行动不会让agent靠近或远离敌人。</p>
-<p><img src="https://i.loli.net/2021/07/18/pGIPLmQoVqsN92b.png" alt="image-20210718135639841"></p>
-<h3 id="4-2-PERFORMANCE-AND-ABLATION-STUDY-性能和消融研究"><a href="#4-2-PERFORMANCE-AND-ABLATION-STUDY-性能和消融研究" class="headerlink" title="4.2 PERFORMANCE AND ABLATION STUDY 性能和消融研究"></a>4.2 PERFORMANCE AND ABLATION STUDY 性能和消融研究</h3><p>难度很高，复杂的地图更牛逼，相比之下，在5张简单的地图上，RODE通常需要更多的样本来学习一个成功的策略。</p>
-<p><img src="https://i.loli.net/2021/07/18/fECMwzasnqBWybm.png" alt="image-20210718135948364"></p>
-<p><img src="https://i.loli.net/2021/07/18/qy6iD1ApHxwalgf.png" alt="image-20210718140159230"></p>
-<p>为了了解RODE的优越性能，我们开展了消融研究，以测试其四个主要组成部分的贡献:(A)受限的角色作用空间;(B)利用动作效果来集中行动;(C)将动作表征集成到角色政策和角色选择器中;(D)分层学习结构。为了测试组件A和组件B，在50K样本后更新角色动作空间时，我们让每个角色动作空间分别包含所有动作或动作的一个随机子集，而框架中的其他部分保持不变。对于组件B，我们确保角色动作空间的并集等于整个动作空间。为了测试组件C，我们可以简单地使用传统的q -网络来学习角色策略和角色选择器。组件D的测试有一点不同，因为我们不能在使用不同角色的同时单独取消它。因此，我们通过使用传统的深度q网络(用于角色策略和角色选择器)去除组件A和C来测试它，并允许角色策略从所有原始动作中进行选择。</p>
-<p><img src="https://i.loli.net/2021/07/28/B4e623u8SJmRUGy.png" alt="image-20210718141340781"></p>
-<h3 id="4-3-POLICY-TRANSFER-政策转移"><a href="#4-3-POLICY-TRANSFER-政策转移" class="headerlink" title="4.3 POLICY TRANSFER 政策转移"></a>4.3 POLICY TRANSFER 政策转移</h3><p>我们可以将学习到的策略转移到具有与<strong>旧动作相似效果的新动作</strong>的任务中<strong>。由于角色动作空间仍然期望包含具有类似效果的动作，这可以通过旧的角色表示来反映</strong>，所以我们不重新计算新任务上的角色表示。此外，在我们的框架中，<strong>是角色与环境交互，代理只需要分配角色</strong>。因此，我们学习到的策略也可以转移到具有不同代理数的任务中</p>
-<p><img src="https://i.loli.net/2021/07/28/cTDbfSI2jZghzrt.png" alt="image-20210718155344262"></p>
-<p>使用不同数目的代理 证明RODE的迁移性</p>
-<h2 id="5附录"><a href="#5附录" class="headerlink" title="5附录"></a>5附录</h2><h3 id="A-架构、超参数和基础设施"><a href="#A-架构、超参数和基础设施" class="headerlink" title="A 架构、超参数和基础设施"></a>A 架构、超参数和基础设施</h3><p>在本文中，我们使用简单的网络结构来实现角色选择器和角色策略。每个<strong>角色策略都是一个简单的线性网络</strong>，没有隐藏层或激活函数，<strong>角色选择器是一个具有64维隐藏层的两层前馈全连接网络</strong>。agent共享两层轨迹编码网络<strong>，一层为全连接层，另一层为64维隐藏状态的GRU层</strong>。对于所有实验，<strong>动作表示的长度d</strong>被设置为20。角色策略的输出和角色选择器的输出分别被送<strong>入各自独立的qmix风格的混合</strong>网络，以估计全局动作价值。这两个混合网络使用相同的架构，包含一个32维的ReLU激活隐藏层。混合网络的参数是由超网络对全局状态的调节产生的。这些设置与QMIX相同</p>
-<h3 id="B案例研究-角色动力学-CASE-STUDY-ROLE-DYNAMICS"><a href="#B案例研究-角色动力学-CASE-STUDY-ROLE-DYNAMICS" class="headerlink" title="B案例研究:角色动力学 CASE STUDY: ROLE DYNAMICS"></a>B案例研究:角色动力学 CASE STUDY: ROLE DYNAMICS</h3><p><strong>为什么限制角色的行动空间可以改善学习性能</strong></p>
-<p>我们从SMAC基准出发对地图走廊进行了研究。我们选择这张地图是因为它呈现了一个艰难的探索任务。这种情况下的最佳策略是，盟军的狂热者需要进行积极的<strong>状态空间探索</strong>，以便学会移动到地图的边缘或阻塞点，以避免被敌军包围。之前最先进的算法都学习了一种<strong>次优</strong>策略，即代理只是为了获得奖励而伤害敌人单位，而不是先移动到边缘然后进行攻击。</p>
-<p><img src="https://i.loli.net/2021/07/18/I1UtPXrwoCKphba.png" alt="image-20210718160832698"></p>
-<p>我们看到所有的agent在一开始都选择了Role 2(图7 (a))来帮助它们<strong>移动到边缘</strong>。代理也学习了一个有效的合作策略，其中一个代理(agnet  A)吸引了大部分的敌人(敌人组A)，这样它的队友在面对较少的敌人(敌人组B)时就有优势。杀死agnet A后，敌方A组通过咽喉到达目的地。在图7 (b)中，活着的agnet 开始攻击这群敌人。然而，敌人仍然非常强大。为了赢得游戏，盟友agnet 学会吸引并杀死部分敌人。它们通过在Role 0(在本例中是撤退)和Role 1(攻击)之间交替实现这一点，如图7 (b-d)所示。</p>
-<p>why？我们基于效果的行动聚类将完整的行动空间分解成<strong>更小的角色行动空间</strong>，每个角色行动空间专注于<strong>具有类似效果的行动的更小子集</strong>。由于每个角色都在一个有相似动作的更小的行动空间中学习，这使得agent能够<strong>有效地探索</strong>，并导致每个角色能够学习不同的策略，比如扩散和收缩。此外，在更小的角色空间中进行探索，使得这些<strong>子策略的协调</strong>更加容易。</p>
-<p><strong>在分层分解的动作空间中进行探索也会对探索空间产生偏见</strong>。例如，在corridor 地图上，Role 0和Role 2会激励agent朝着某个方向探索状态空间，从而帮助他们学习这张地图上的几个重要策略:1)代理首先移动到边缘(Role 0)以避免被敌人包围(图7 (a))， 2)代理交替攻击(Role 1)和撤退(Role 2)以吸引并杀死部分敌人，获得数量优势(图7 (b-d))。图8也支持角色0和角色2的帮助探索频率随着主体探索次数的增加而先提高，然后随着合作策略的逐渐收敛而降低。</p>
-<p>在其他地图上，受限的角色动作空间可以帮助代理以其他方式解决任务。例如，在地图3s5z vs 3s6z中，代理学习效率更高，因为动作编码器将任务分解成<strong>两个子任务</strong>，一个专注于攻击狂热者，另一个专注于攻击潜行者。这些受限子问题的学习策略显著降低了学习复杂度。总之，<strong>动作效应为联合动作空间的分解提供了有效的信息</strong>。根据动作的效果进行聚类可以使角色发现更加容易，在较小的动作空间中学习合作策略可以使学习更加容易处理。</p>
-<h3 id="C实验细节"><a href="#C实验细节" class="headerlink" title="C实验细节"></a>C实验细节</h3><h3 id="D角色间隔和循环角色选择器"><a href="#D角色间隔和循环角色选择器" class="headerlink" title="D角色间隔和循环角色选择器"></a>D角色间隔和循环角色选择器</h3><h4 id="D-1-ROLE-INTERVAL"><a href="#D-1-ROLE-INTERVAL" class="headerlink" title="D.1 ROLE INTERVAL"></a>D.1 ROLE INTERVAL</h4><p>在我们的框架中，<strong>角色选择器在每个c时间步中将角色分配给每个代理</strong>。我们称c为角色间隔。角色间隔决定动作空间更改的频率，并可能对性能产生关键影响。为了更好地了解这种影响，我们更改角色间隔，同时保持其他部分不变，并在多个环境上测试RODE。</p>
-<p><img src="https://i.loli.net/2021/07/18/DshdFKH6JzB3u9r.png" alt="image-20210718180238124"></p>
-<h4 id="D-2循环角色选择器和全连接角色选择器"><a href="#D-2循环角色选择器和全连接角色选择器" class="headerlink" title="D.2循环角色选择器和全连接角色选择器"></a>D.2循环角色选择器和全连接角色选择器</h4><p>角色选择器应该学习观察空间的分解。然而，我们基于本地的行动观察历史来构建这个组件。在本节中，我们将讨论在角色选择器中使用GRU的影响。在图13中，我们比较了以局部观察为条件的全连接角色选择器的RODE和RODE。正如预期的那样，<strong>基于本地观察的循环角色选择器比选择器执行得更好。</strong></p>
-<h3 id="E聚类算法"><a href="#E聚类算法" class="headerlink" title="E聚类算法"></a>E聚类算法</h3><h4 id="E-1-k值的影响"><a href="#E-1-k值的影响" class="headerlink" title="E.1 k值的影响"></a>E.1 k值的影响</h4><p>一般来说，k值为3或5可以很好地适用于这些地图。实际上，我们将k = 3设置在具有同种敌人的地图上，而将k = 5设置在具有同种敌人的地图上。</p>
-<p>为了进一步理解不同的k值是如何影响学习性能的，我们以一个超级困难的地图6h vs 8z为例。当k=3或5时，聚类方法(在向所有其他聚类添加离群值之后)给出三个角色动作空间 Move Eastward &amp; Northward, Attack, and Move Westward &amp; Southward.。类似于附录B中讨论的走廊地图的情况，这些角色可以改善探索，从而提高性能。然而，当k=7时，<strong>所有的移动动作都成为离群值。结果是大部分角色动作空间变成了原来的完整动作空间。</strong>这种对动作空间的分解不会减少搜索空间，因此性能接近于QMIX。</p>
-<p><img src="https://i.loli.net/2021/07/18/PUAgY1z2sDKhpG9.png" alt="image-20210718181414590"></p>
-<p>为了避免k值的选择和异常值的处理方式之间的这种复杂交互，我们建议在聚类动作表示时使用X-means，我们将在下一节详细讨论</p>
-<h4 id="E-2其他聚类算法"><a href="#E-2其他聚类算法" class="headerlink" title="E.2其他聚类算法"></a>E.2其他聚类算法</h4><p>X-means (Pelleg等人，2000)通过<strong>自动确定簇的数量</strong>改进了k-means。我们使用最小的无噪声描述长度作为X-means 的分裂标准，并在所有14张图上使用X-means测试RODE。结果如图15所示。我们可以看到，结果与预先定义的k值的k-means相当。因此，当面对一个新任务时，我们推荐X-means，而对于用户知道角色数量的任务，k-means可以更准确。</p>
-<p><img src="https://i.loli.net/2021/07/18/JPqUCjy7m4zfeRh.png" alt="image-20210718181151029" style="zoom:150%;" /></p>
-<h3 id="F-ROLE-REPRESENTATIONS-角色表示"><a href="#F-ROLE-REPRESENTATIONS-角色表示" class="headerlink" title="F ROLE REPRESENTATIONS 角色表示"></a>F ROLE REPRESENTATIONS 角色表示</h3><p><img src="https://i.loli.net/2021/07/18/nyUdXcoxT9tw2r5.png" alt="image-20210718181537930"></p>
-<p>我们使用角色动作空间中的<strong>动作的平均</strong>表示来表示一个角色。我们发现，<strong>角色选择器和角色策略的Q网络(包括处理本地观测的gru和网络($f_\beta$或$f_{\rho_j}$)的分离</strong>对于确保这些角色表示具有足够的表达性是重要的。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
